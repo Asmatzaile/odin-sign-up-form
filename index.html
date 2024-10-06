@@ -7,8 +7,51 @@
     <title>Sign-Up Form</title>
 </head>
 <body>
-    <div>
-        This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started. You <em>know</em> you want to.
-    </div>
+    <header>
+        <h1>Odin</h1>
+        <p>Photo by</p>
+    </header>
+    <main>
+        <div>
+            <p>
+                This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. <br>
+                Sign up <em>now</em> to get started.
+            </p>
+            <p>
+                You <em>know</em> you want to.
+            </p>
+        </div>
+        <div>
+            <h2>Let's do this!</h2>
+            <form id="form">
+                <div>
+                    <label for="fname">First name</label>
+                    <input type="text" id="fname" name="fname">
+                </div>
+                <div>
+                    <label for="lname">Last name</label>
+                    <input type="text" id="lname" name="lname">
+                </div>
+                <div>
+                    <label for="email">email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div>
+                    <label for="phone">Phone number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div>
+                    <label for="pass">Password</label>
+                    <input type="password" id="pass" name="pass">
+                </div>
+                <div>
+                    <label for="pass-confirm">Confirm password</label>
+                    <input type="password" id="pass-confirm" name="pass-confirm">
+                </div>
+            </form>
+        </div>
+        <button form="form">Create Account</button>
+        <p>Already have an account? <a href="">Log in</a></p>
+    </main>
 </body>
 </html>
