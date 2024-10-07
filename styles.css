@@ -31,6 +31,9 @@ a {
     --white: #fff;
     --light-grey: #f9fafb;
     --bluish-grey: #E5E7EB;
+    --blue: #0000FF;
+    --green: #aaffaa;
+    --red: #ffaaaa;
 }
 
 
@@ -115,8 +118,21 @@ label {
 input {
     width: 240px;
     height: 28px;
-    border: 1.5px solid var(--bluish-grey);
     border-radius: 3px;
+    border: 1.5px solid var(--bluish-grey);
+
+    &:user-valid {
+        border: 2px solid var(--green);
+        outline: none;
+    }
+    &:user-invalid {
+        border: 2px solid var(--red);
+        outline: none;
+    }
+    &:focus {
+        border: 2px solid var(--blue);
+        outline: none;
+    }
 }
 
 button {
