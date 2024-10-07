@@ -26,14 +26,15 @@ a {
 }
 
 :root {
+    --black: #000;
     --dark-green: #596D48;
     --gray: #E5E7EB;
     --white: #fff;
     --light-grey: #f9fafb;
     --bluish-grey: #E5E7EB;
     --blue: #0000FF;
-    --green: #aaffaa;
-    --red: #ffaaaa;
+    --green: #6ebf6e;
+    --red: #ff6666;
 }
 
 
@@ -113,6 +114,56 @@ label {
     text-transform: uppercase;
     font-size: 14px;
     margin-bottom: 2px;
+    padding-right: 2px;
+
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:has(+ :required)::after {
+        padding: 1px 5px;
+        border-radius: 20px;
+        font-size: 8px;
+
+        content: "REQUIRED";
+        background-color: var(--black);
+        color: var(--white);
+    }
+    &::before {
+        position: absolute;
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        margin-left: calc(100% + 4px);
+        margin-top: 48px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--white);
+    }
+
+    &:has(+ :user-invalid)::before {
+        content: "X";
+        background-color: var(--red);
+    }
+
+    &:has(+ :required:user-invalid)::after {
+        background-color: var(--red);
+    }
+
+    &:has(+ :user-valid) {
+        &::after {
+            visibility: hidden;
+        }
+        &::before {
+            content: "✓";
+            background-color: var(--green);
+        }
+    }
 }
 
 input {
@@ -120,6 +171,7 @@ input {
     height: 28px;
     border-radius: 3px;
     border: 1.5px solid var(--bluish-grey);
+    padding: 0 4px;
 
     &:user-valid {
         border: 2px solid var(--green);
@@ -132,6 +184,7 @@ input {
     &:focus {
         border: 2px solid var(--blue);
         outline: none;
+        box-shadow: 0 1px 5px #0005;
     }
 }
 
