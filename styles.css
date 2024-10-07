@@ -39,8 +39,23 @@ body {
 
 header {
     width: 600px;
+    padding: 10px 0;
     background-color: var(--dark-green);
     color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo-container {
+        align-self: stretch;
+        margin-top: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.374);
+        padding: 20px 0;
+    }
 
     img {
         height: 90px;
@@ -146,12 +161,4 @@ main > * {
 
 .text-div > :first-child {
     margin-bottom: 20px;
-}
-
-.logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.374);
-    padding: 10px 0;
 }
