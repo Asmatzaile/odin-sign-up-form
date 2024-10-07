@@ -41,12 +41,17 @@ header {
     width: 600px;
     background-color: var(--dark-green);
     color: var(--white);
-}
 
-h1 {
-    text-transform: uppercase;
-    font-family: 'Norse Bold';
-    font-size: 80px;
+    img {
+        height: 90px;
+    }
+
+    h1 {
+        text-transform: uppercase;
+        font-family: 'Norse Bold';
+        font-size: 80px;
+    }
+
 }
 
 main {
