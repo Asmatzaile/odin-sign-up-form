@@ -21,6 +21,10 @@ button, input {
     font-size: 100%;
 }
 
+a {
+    color: inherit;
+}
+
 :root {
     --dark-green: #596D48;
     --gray: #E5E7EB;
@@ -46,6 +50,8 @@ header {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    background-image: url(halie-west-25xggax4bSA-unsplash.jpg);
+    background-size: cover;
 
     .logo-container {
         align-self: stretch;
