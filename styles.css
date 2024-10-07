@@ -1,11 +1,141 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+/* Resets */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+button, input {
+    font-family: inherit;
+    font-size: 100%;
+}
+
+:root {
+    --dark-green: #596D48;
+    --gray: #E5E7EB;
+    --white: #fff;
+    --light-grey: #f9fafb;
+    --bluish-grey: #E5E7EB;
+}
+
+
 body {
     font-family: Roboto, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--light-grey);
+}
+
+header {
+    width: 600px;
+    background-color: var(--dark-green);
+    color: var(--white);
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    --left-margin: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+fieldset {
+    display: flex;
+    border: none;
+    gap: 50px;
+
+    & > div {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+label {
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+input {
+    width: 240px;
+    height: 28px;
+    border: 1.5px solid var(--bluish-grey);
+    border-radius: 3px;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background-color: var(--dark-green);
+    padding: 14px 48px;
+    font-weight: bold;
+    color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 5px 7px rgb(201, 201, 201);
+
+
+    align-self: flex-start;
+}
+
+main a {
+    color: var(--dark-green);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main > * {
+    margin-left: var(--left-margin);
+}
+
+.account-creation {
+    margin-left: 0;
+    padding: 30px 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    background-color: var(--white);
+    box-shadow: 0 1px 10px rgb(201, 201, 201);
+    > * {
+        margin-left: var(--left-margin);
+    }
+}
+
+.text-l {
+    font-size: 20px;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.text-div {
+    max-width: 580px;
+}
+
+.text-div > :first-child {
+    margin-bottom: 20px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.374);
+    padding: 10px 0;
 }
